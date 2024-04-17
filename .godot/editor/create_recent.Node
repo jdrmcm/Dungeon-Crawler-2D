@@ -1,0 +1,10 @@
+Node
+Node2D
+Sprite2D
+LightOccluder2D
+PointLight2D
+Area2D
+CollisionShape2D
+OccluderInstance3D
+Camera2D
+TileMap

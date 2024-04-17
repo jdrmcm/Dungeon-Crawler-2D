@@ -1,0 +1,9 @@
+res://Scenes/dev_world.tscn
+res://Scenes/CameraController.gd
+res://Scenes/Pawn.gd
+res://Scripts/CameraController.gd
+res://Scenes/Path.gd
+res://Scripts/Pawn.gd
+res://Scenes/PlayerController.gd
+res://Scripts/PlayerController.gd
+res://Scenes/World.gd
