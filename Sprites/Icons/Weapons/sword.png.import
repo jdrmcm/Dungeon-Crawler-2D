@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cobcoo5lcgoe3"
-path="res://.godot/imported/dungeon-tilemap.png-483942b416dfe8c88cc1a44ea3fd36d4.ctex"
+uid="uid://ddokw1hcebnga"
+path="res://.godot/imported/sword.png-274a1f1f86f10c62a6841a0e904f1e4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Tiles/dungeon-tilemap.png"
-dest_files=["res://.godot/imported/dungeon-tilemap.png-483942b416dfe8c88cc1a44ea3fd36d4.ctex"]
+source_file="res://Sprites/Icons/Weapons/sword.png"
+dest_files=["res://.godot/imported/sword.png-274a1f1f86f10c62a6841a0e904f1e4a.ctex"]
 
 [params]
 

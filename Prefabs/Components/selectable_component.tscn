@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cft0cycdjh375"]
+
+[ext_resource type="Script" path="res://Scripts/SelectableComponent.gd" id="1_n7m04"]
+[ext_resource type="Texture2D" uid="uid://c4lxu88urbwf0" path="res://Sprites/UI/SelectionBox.png" id="2_f5abe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo2nc"]
+radius = 5.0
+height = 20.0
+
+[node name="SelectableComponent" type="Node2D"]
+script = ExtResource("1_n7m04")
+
+[node name="Area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+shape = SubResource("CapsuleShape2D_mo2nc")
+
+[node name="SelectionBox" type="Sprite2D" parent="."]
+visible = false
+z_index = 2
+texture = ExtResource("2_f5abe")

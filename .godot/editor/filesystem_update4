@@ -1,7 +1,2 @@
 res://Scenes/dev_world.tscn
 res://Scripts/Pawn.gd
-res://Scripts/CameraController.gd
-res://Scripts/Tilemap.gd
-res://Scripts/World.gd
-res://Scripts/PlayerController.gd
-res://Scripts/Tile.gd

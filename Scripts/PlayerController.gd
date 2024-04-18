@@ -7,17 +7,20 @@ func _input(event):
 	if event.is_action_pressed("select"):
 		if selected.is_empty() == false:
 			for item in selected:
-				item.collider.get_parent().selected = false
+				item.collider.get_parent().select(false)
 		
 		selected = check_if_something_at_position(get_global_mouse_position())
 		
 		if selected.is_empty() == false:
-			for item in selected:
-				item.collider.get_parent().selected = true
+			selected[0].collider.get_parent().select(true)
 	
+	# Handles moving controllable selectables
 	if event.is_action_pressed("move"):
-		for item in selected:
-			item.collider.get_parent().try_move_to_position(get_global_mouse_position())
+		if selected.is_empty():
+			return
+		
+		if selected[0].collider.get_parent().controllable:
+			selected[0].collider.get_node("../..").try_move_to_position(get_global_mouse_position())
 
 # Checks if there is a selectable thing at target position
 func check_if_something_at_position(target: Vector2) -> Array:

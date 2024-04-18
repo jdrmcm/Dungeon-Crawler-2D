@@ -5,6 +5,8 @@ extends TileMap
 var astar_grid: AStarGrid2D
 var tile_data = {}
 
+const NUM_LAYERS: int = 2
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in get_used_cells(0):
@@ -33,7 +35,12 @@ func recalculate_astar():
 func calculate_walkable(tile_position: Vector2i):
 	var tile_data = get_cell_tile_data(0, tile_position)
 	
-	if tile_data == null or tile_data.get_custom_data("walkable") == false:
+	if tile_data == null or tile_data.get_custom_data("traversable") == false:
+		astar_grid.set_point_solid(tile_position, true)
+	
+	tile_data = get_cell_tile_data(1, tile_position)
+	
+	if tile_data != null and tile_data.get_custom_data("traversable") == false:
 		astar_grid.set_point_solid(tile_position, true)
 
 # Called by pawn whenever they move instead of updating grid every frame
@@ -41,6 +48,6 @@ func pawn_moved(destination: Vector2i, pawn):
 	tile_data[destination].obstructed = true
 	tile_data[world.pawns[pawn]].obstructed = false
 
-func set_obstructed(position: Vector2i, obstructed: bool):
-	tile_data[position].obstructed = obstructed
+func set_obstructed(pos: Vector2i, obstructed: bool):
+	tile_data[pos].obstructed = obstructed
 	print("obstructed ", position, " = ", obstructed)

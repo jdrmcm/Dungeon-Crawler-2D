@@ -1,6 +1,6 @@
-Node
 Node2D
 Sprite2D
+Node
 LightOccluder2D
 PointLight2D
 Area2D
