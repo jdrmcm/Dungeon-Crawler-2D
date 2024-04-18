@@ -17,7 +17,7 @@ func _input(event):
 	
 	if event.is_action_pressed("move"):
 		for item in selected:
-			item.collider.get_parent().move_to_position(get_global_mouse_position())
+			item.collider.get_parent().try_move_to_position(get_global_mouse_position())
 
 # Checks if there is a selectable thing at target position
 func check_if_something_at_position(target: Vector2) -> Array:
