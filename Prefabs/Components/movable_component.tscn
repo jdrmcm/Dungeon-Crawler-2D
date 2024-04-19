@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://digqbd0liwryu"]
+
+[ext_resource type="Script" path="res://Scripts/MovableComponent.gd" id="1_l65oa"]
+[ext_resource type="Texture2D" uid="uid://6h3bad2wlbcp" path="res://Sprites/UI/MoveMarker.png" id="2_ltsed"]
+
+[node name="MovableComponent" type="Node2D"]
+script = ExtResource("1_l65oa")
+
+[node name="MoveMarker" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_ltsed")

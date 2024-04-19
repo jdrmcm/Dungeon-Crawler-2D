@@ -1,2 +1,13 @@
 res://Scenes/dev_world.tscn
 res://Scripts/Pawn.gd
+res://Scripts/SelectableComponent.gd
+res://Scripts/Tilemap.gd
+res://Scripts/World.gd
+res://Prefabs/Components/selectable_component.tscn
+res://Scenes/MovableComponent.gd
+res://Scripts/PlayerController.gd
+res://Scripts/MovableComponent.gd
+res://Scripts/Tile.gd
+res://Scripts/Map.gd
+res://Scenes/Pawn.gd
+res://Scripts/test_Map.gd

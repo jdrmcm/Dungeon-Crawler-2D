@@ -1,6 +1,6 @@
 extends TileMap
 
-@onready var world = $".."
+@onready var map = $".."
 
 var astar_grid: AStarGrid2D
 var tile_data = {}
@@ -31,6 +31,8 @@ func recalculate_astar():
 			
 			calculate_walkable(tile_position)
 
+
+
 # Calculates if a specific tile is walkable
 func calculate_walkable(tile_position: Vector2i):
 	var tile_data = get_cell_tile_data(0, tile_position)
@@ -46,7 +48,7 @@ func calculate_walkable(tile_position: Vector2i):
 # Called by pawn whenever they move instead of updating grid every frame
 func pawn_moved(destination: Vector2i, pawn):
 	tile_data[destination].obstructed = true
-	tile_data[world.pawns[pawn]].obstructed = false
+	tile_data[map.pawns[pawn]].obstructed = false
 
 func set_obstructed(pos: Vector2i, obstructed: bool):
 	tile_data[pos].obstructed = obstructed

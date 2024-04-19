@@ -13,7 +13,10 @@ config_version=5
 config/name="Dungeon Crawler 2D"
 run/main_scene="res://Scenes/dev_world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [input]
 

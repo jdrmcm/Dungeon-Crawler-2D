@@ -4,7 +4,7 @@ extends Node
 
 var pawns: Dictionary = {}
 
-# Add pawn to array of pawns, returns false if pawn is already in array
+# Add pawn to dict of pawns, returns false if pawn is already in dict
 func add_pawn_to_list(pawn: Object) -> bool:
 	if pawns.has(pawn):
 		return false
@@ -21,3 +21,8 @@ func update_pawn_positions():
 	for pawn in pawns:
 		var pawn_position = tile_map.local_to_map(pawn.global_position)
 		pawns[pawn] = pawn_position
+
+# Function to return pawn by location
+# Query arg is a Vector2i of the queried location on the tilemap
+func check_for_pawn_by_location(query: Vector2i) -> Object:
+	return pawns.find_key(query)
